@@ -130,9 +130,4 @@ RUN cd ~/opencv/build/ && \
 RUN cd ~/opencv/build/ && \
     ldconfig
 
-RUN \
-  wget https://www.waveshare.com/w/upload/e/eb/Camera_overrides.tar.gz && \
-  tar zxvf Camera_overrides.tar.gz -C /var/nvidia/nvcam/settings/ && \
-  rm -f Camera_overrides.tar.gz
-
 WORKDIR /home/nano
