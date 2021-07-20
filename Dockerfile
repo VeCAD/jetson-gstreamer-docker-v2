@@ -130,4 +130,5 @@ RUN cd ~/opencv/build/ && \
 RUN cd ~/opencv/build/ && \
     ldconfig
 
+# work dir
 WORKDIR /home/nano

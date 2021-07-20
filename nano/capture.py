@@ -6,10 +6,10 @@ import cv2
 # the original pipeline is from JetsonHacksNano github
 # https://github.com/JetsonHacksNano/CSI-Camera
 def gstreamer_pipeline(
-    capture_width=640,
-    capture_height=480,
-    display_width=640,
-    display_height=480,
+    capture_width=1280,
+    capture_height=720,
+    display_width=1280,
+    display_height=720,
     framerate=60,
     flip_method=0
     ):
@@ -43,7 +43,6 @@ def show_camera():
             cv2.imshow("Image", frame)
         else:
             print('no video')
-
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
     cap.release()

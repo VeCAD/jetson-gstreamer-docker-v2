@@ -67,3 +67,5 @@ In case cv display fails, type this in host
 ```
 xhost +local:docker
 ```
+
+TODO: Monitor camera stability
