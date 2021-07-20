@@ -63,7 +63,7 @@ Run the capture.py
 python3 capture.py
 ```
 
-In case cv imshow fails, type this in host
+In case cv display fails, type this in host
 ```
 xhost +local:docker
 ```
