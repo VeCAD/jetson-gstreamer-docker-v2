@@ -47,3 +47,5 @@ nvidia/
 └── nvidia_drivers.tbz2
 ├── config.tbz2
 ```
+Instead of using the balena image, using here arm64v8/ubuntu:18.04 one. 
+
