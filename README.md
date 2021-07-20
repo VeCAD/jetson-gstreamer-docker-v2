@@ -47,10 +47,10 @@ nvidia/
 └── nvidia_drivers.tbz2
 ├── config.tbz2
 ```
-Instead of using the origna balena image, using here arm64v8/ubuntu:18.04 one.
+Instead of using the original Dockerfile balena image, using here arm64v8/ubuntu:18.04 one.
 
 The camera requires `nvargus-daemon &` to be started inside the container per the 
-orginal repo container startup script. Moved it here to inside capture.py
+original repo container startup script. Moved it here to inside capture.py
 
 To run this container
 ```
@@ -67,4 +67,3 @@ In case cv display fails, type this in host
 ```
 xhost +local:docker
 ```
-
