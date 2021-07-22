@@ -67,5 +67,52 @@ In case cv display fails, type this in host
 ```
 xhost +local:docker
 ```
+Camera stability test
 
-TODO: Monitor camera stability
+Sending the camera feed to a Darknet Yolo inference engine. 640x480 image size, 
+had to drop the framerate to 15, otherwise results in buffer overflow issues
+```
+ def gstreamer_pipeline(self,
+        capture_width=640,
+        capture_height=480,
+        display_width=640,
+        display_height=480,
+        framerate=15,
+        flip_method=0
+        ):
+        return (
+        "nvarguscamerasrc ! "
+        "video/x-raw(memory:NVMM), "
+        "width=(int)%d, height=(int)%d, "
+        "format=(string)NV12, framerate=(fraction)%d/1 ! "
+        "nvvidconv flip-method=%d ! "
+        "video/x-raw, width=(int)%d, height=(int)%d, format=(string)BGRx ! "
+        "videoconvert ! "
+        "video/x-raw, format=(string)BGR ! appsink drop=True "
+        % (
+            capture_width,
+            capture_height,
+            framerate,
+            flip_method,
+            display_width,
+            display_height
+        )
+        )
+```
+
+Tegrastats
+```
+RAM 2927/3963MB (lfb 14x4MB) SWAP 1006/1981MB (cached 36MB) CPU [92%@1479,96%@1479,95%@1479,96%@1479] EMC_FREQ 0% 
+GR3D_FREQ 99% PLL@54.5C CPU@59.5C iwlwifi@57C PMIC@100C GPU@56.5C AO@61.5C thermal@58.5C POM_5V_IN 8055/7870 
+POM_5V_GPU 2424/2206 POM_5V_CPU 3084/3110
+```
+
+Htop 
+```
+Tasks:  41 total,   4 running,  37 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 54.3 us, 13.1 sy,  0.0 ni, 27.7 id,  1.5 wa,  2.4 hi,  0.9 si,  0.0 st
+KiB Mem :  4057980 total,   420056 free,  2948504 used,   689420 buff/cache
+KiB Swap:  2028976 total,  1004272 free,  1024704 used.   935504 avail Mem
+
+PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                                                         15876   ubuntu    20   0 2100232  67560   5972 S  94.1  1.7 458:24.63 
+```
