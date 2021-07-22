@@ -114,5 +114,5 @@ Tasks:  41 total,   4 running,  37 sleeping,   0 stopped,   0 zombie
 KiB Mem :  4057980 total,   420056 free,  2948504 used,   689420 buff/cache
 KiB Swap:  2028976 total,  1004272 free,  1024704 used.   935504 avail Mem
 
-PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                                                         15876   ubuntu    20   0 2100232  67560   5972 S  94.1  1.7 458:24.63 
+PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND   \                                                                                                      15876   ubuntu    20   0 2100232  67560   5972 S  94.1  1.7 458:24.63 
 ```
