@@ -109,4 +109,4 @@ POM_5V_GPU 2424/2206 POM_5V_CPU 3084/3110
 
 Htop
 >8 hrs without camera disconnecting or nvargus crashing
-!htop](htop.PNG)
+![htop](htop.PNG)
