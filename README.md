@@ -107,13 +107,6 @@ GR3D_FREQ 99% PLL@54.5C CPU@59.5C iwlwifi@57C PMIC@100C GPU@56.5C AO@61.5C therm
 POM_5V_GPU 2424/2206 POM_5V_CPU 3084/3110
 ```
 
-Htop 
-```
-Tasks:  41 total,   4 running,  37 sleeping,   0 stopped,   0 zombie
-%Cpu(s): 54.3 us, 13.1 sy,  0.0 ni, 27.7 id,  1.5 wa,  2.4 hi,  0.9 si,  0.0 st
-KiB Mem :  4057980 total,   420056 free,  2948504 used,   689420 buff/cache
-KiB Swap:  2028976 total,  1004272 free,  1024704 used.   935504 avail Mem
-
-PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND 
-15876   ubuntu    20   0 2100232  67560   5972 S  94.1  1.7 458:24.63 
-```
+Htop
+>8 hrs without camera disconnecting or nvargus crashing
+!htop](htop.PNG)
