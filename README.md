@@ -110,3 +110,13 @@ POM_5V_GPU 2424/2206 POM_5V_CPU 3084/3110
 Htop
 >8 hrs without camera disconnecting or nvargus crashing
 ![htop](htop.PNG)
+
+Notes on up host distro upgrade
+I noticed that stability got worse after upgrading the host distro. 
+I suspect either the Docker or L4T package updates is breaking something. 
+```
+sudo apt update
+sudo apt upgrade -y
+```
+Had to reflash to original L4T image to regain the stability
+
