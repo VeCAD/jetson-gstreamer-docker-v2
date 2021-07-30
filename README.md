@@ -111,9 +111,9 @@ Htop
 >8 hrs without camera disconnecting or nvargus crashing
 ![htop](htop.PNG)
 
-Notes on up host distro upgrade
+Notes on up host distro upgrade \
 I noticed that stability got worse after upgrading the host distro. 
-I suspect either the Docker or L4T package updates is breaking something. 
+Suspect either the Docker or L4T package updates is breaking something. 
 ```
 sudo apt update
 sudo apt upgrade -y
